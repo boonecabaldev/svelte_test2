@@ -1,5 +1,6 @@
 <script>
 	import Counter from './Counter.svelte';
+	import Article from '../lib/Article.svelte';
 	//import MyCounter from './MyCounter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
@@ -17,11 +18,9 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-
-
 <section>
 	<h1>Home</h1>
-
+	<!--
 	<label>Talk to yourself: <input type="text" bind:value={newPost}></label>
 	<button on:click={addPost}>Post it!</button>
 	<div>
@@ -30,7 +29,17 @@
 		{/each}
 	</div>
 
+	-->
 
+	<Article
+		blogTitle="Sandwiches are Great"
+		blogBody="I just had the best sandwich."
+		published = {true}/>
+
+	<Counter />
+
+
+	<!--
 	<h1>
 		<span class="welcome">
 			<picture>
@@ -45,8 +54,7 @@
 	<h2>
 		try editing <strong>src/routes/+page.svelte</strong>
 	</h2>
-
-	<Counter />
+	-->
 </section>
 
 <style>
